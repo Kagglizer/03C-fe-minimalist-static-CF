@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Firefly Zero Day</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script>
+      // Define the URL to the team.json file
+      const teamJsonUrl = "data/team.json";
+
+      // Function to create a card from the template
+      function createCard(member) {
+        const cardTemplate = document
+          .getElementById("card-template")
+          .cloneNode(true);
+        cardTemplate.removeAttribute("id"); // Remove the template ID
+        cardTemplate.querySelector(".card-title").textContent = member.name;
+        cardTemplate.querySelector(".card-text").textContent =
+          member.description;
+        cardTemplate.querySelector("a.btn-primary").href = member.linkedIn;
+
+        // Update the image source in the template
+        const imageElement = cardTemplate.querySelector("img.card-img-top");
+        //imageElement.src = `./assets/${member.image}`; // Relative path to the image
+        imageElement.src = member.image; // Relative path to the image
+
+        // Show the card template by changing its display style to "block"
+        cardTemplate.style.display = "block";
+
+        return cardTemplate;
+      }
+
+      // Fetch JSON data
+      fetch(teamJsonUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          const cardContainer = document.getElementById("card-container");
+
+          // Loop through each team member and create cards
+          data.forEach((member) => {
+            const card = createCard(member);
+            cardContainer.appendChild(card);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching JSON data:", error);
+        });
+
+      // Function to populate card template with data
+      function populateCard(cardData) {
+        const cardTemplate = document.getElementById("card-template");
+        const cardTitle = cardTemplate.querySelector(".card-title");
+        const cardText = cardTemplate.querySelector(".card-text");
+        const linkedInLink = cardTemplate.querySelector(".btn");
+        const cardImage = cardTemplate.querySelector(".card-img-top"); // Add this line
+
+        cardTitle.textContent = cardData.name;
+        cardText.textContent = cardData.description;
+        linkedInLink.href = cardData.linkedIn;
+        cardImage.src = cardData.image; // Set the image source
+        cardImage.alt = cardData.name; // Set the alt attribute for accessibility
+      }
+    </script>
+
+    <!-- Card Template -->
+    <div id="card-template" class="col-md-4 mb-5" style="display: none">
+      <div class="card h-100">
+        <img class="card-img-top" src="" alt="Team Member Image" />
+        <div class="card-body">
+          <h2 class="card-title" style="color: black"></h2>
+          <p class="card-text" style="color: black"></p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary btn-sm" href="#" target="_blank"
+            >linkedIn</a
+          >
+        </div>
+      </div>
+    </div>
+    ;
+
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container px-5">
+        <a class="navbar-brand" href="#!">Firefly Adventures</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="aboutus.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gamepagemock.html">Game Page Mock Up</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#!">Educational Game Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Creative Portal Demo</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5">
+      <!-- Heading Row-->
+      <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-5">
+          <h1 class="font-weight-light text-center">Our Team</h1>
+        </div>
+        <div class="col-lg-12 text-center">
+          <h5 class="font-weight-light text-center">
+            We are a team of 5 engineers and 1 visioneer from around the United
+            States
+          </h5>
+          <br />
+          <a
+            class="btn btn-warning align-items-center"
+            href="mailto:thane@firefly-adventures.com"
+            >Say individual or via this group email.</a
+          >
+          <br />
+        </div>
+      </div>
+
+      <!-- CONTENT CONTAINER-->
+      <div class="card text-white bg-white my-5 py-4 text-center">
+        <div class="card-body"></div>
+        <!--INSERT CARD TEMPLATE-->
+        <div id="card-container" class="row gx-4 gx-lg-5"></div>
+      </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="py-4 bg-success">
+      <div class="container px-4 px-lg-5">
+        <p class="m-0 text-center text-white">Copyright &copy; Firefly 2024</p>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
