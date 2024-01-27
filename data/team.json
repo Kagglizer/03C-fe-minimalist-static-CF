@@ -10,17 +10,17 @@
   {
     "index": 2,
     "name": "Thane Thompson",
-    "image": "./assets/ThaneCartoon1.png",
+    "image": "./assets/ThaneCartoon2.png",
     "description":
-      "Software developer with skills in C#/.NET, React, JavaScript, HTML/CSS, Python, and databases. Multiple application service and development experiences with engagement / customer relationship management (CRM) and geographic information systems (GIS).",
+      "Software developer and fractional operations executive with skills in C#/.NET, React, JavaScript, HTML/CSS, Python, and databases. Multiple application service and development experiences with engagement / customer relationship management (CRM) and geographic information systems (GIS). Super interested in AI applications to education, science, and general knowledge transfer",
     "linkedIn": "https://www.linkedin.com/in/thanejthompson/"
   },
   {
     "index": 3,
     "name": "Bill Wold",
-    "image": "../assets/cartoonbill.png",
+    "image": "../assets/cartoonbill2.png",
     "description":
-      "Entreprenur, world saving visioneer, and Army Retiree subject to recall. Former Deputy Brigade Commander, Mobilization Planner, Company Commander, Platoon Leader, Paratrooper.  Bill enjoys coaching and is a father of 3 with eldest having won a full ride scholarship for Chemistry.",
+      "Entrepreneur, author, world saving visioneer, and Army Retiree subject to recall. Former Deputy Brigade Commander, Mobilization Planner, Company Commander, Platoon Leader, Paratrooper.  Bill enjoys coaching and is a father of 3 with eldest having won a full ride scholarship for Chemistry.",
     "linkedIn":
       "https://www.linkedin.com/in/william-wold-06716743/"
   },
@@ -45,7 +45,7 @@
   {
     "index": 6,
     "name": "Jonny Gonzalez",
-    "image": "../assets/JonnyCartoon1.png",
+    "image": "../assets/JonnyCartoon3.png",
     "description":
       "I am a seasoned Full Stack Software Engineer with a proven track record in leveraging cutting-edge technologies and open-source frameworks, including ReactJS, .Net, SQL, HTML5, CSS3, GitHub, and JavaScript. My expertise extends to web3 development, integration of Stripe for ledger functionalities, and seamless client interaction. I am dedicated to crafting exceptional applications by combining technical proficiency with a deep understanding of client requirements.",
     "linkedIn":

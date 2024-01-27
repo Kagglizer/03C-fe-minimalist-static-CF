@@ -17,30 +17,40 @@
 
   <body>
     <script>
-      // Define the URL to the team.json file
-      const teamJsonUrl = "data/team.json";
-
       // Function to create a card from the template
       function createCard(member) {
         const cardTemplate = document
           .getElementById("card-template")
           .cloneNode(true);
         cardTemplate.removeAttribute("id"); // Remove the template ID
-        cardTemplate.querySelector(".card-title").textContent = member.name;
-        cardTemplate.querySelector(".card-text").textContent =
-          member.description;
-        cardTemplate.querySelector("a.btn-primary").href = member.linkedIn;
-
-        // Update the image source in the template
-        const imageElement = cardTemplate.querySelector("img.card-img-top");
-        //imageElement.src = `./assets/${member.image}`; // Relative path to the image
-        imageElement.src = member.image; // Relative path to the image
-
         // Show the card template by changing its display style to "block"
         cardTemplate.style.display = "block";
-
         return cardTemplate;
       }
+
+      // function createCard(member) {
+      //   const cardTemplate = document
+      //     .getElementById("card-template")
+      //     .cloneNode(true);
+      //   cardTemplate.removeAttribute("id"); // Remove the template ID
+      //   cardTemplate.querySelector(".card-title").textContent = member.name;
+      //   cardTemplate.querySelector(".card-text").textContent =
+      //     member.description;
+      //   cardTemplate.querySelector("a.btn-primary").href = member.linkedIn;
+
+      //   // Update the image source in the template
+      //   const imageElement = cardTemplate.querySelector("img.card-img-top");
+      //   //imageElement.src = `./assets/${member.image}`; // Relative path to the image
+      //   imageElement.src = member.image; // Relative path to the image
+
+      //   // Show the card template by changing its display style to "block"
+      //   cardTemplate.style.display = "block";
+
+      //   return cardTemplate;
+      // }
+
+      // Define the URL to the team.json file
+      const teamJsonUrl = "data/team.json";
 
       // Fetch JSON data
       fetch(teamJsonUrl)
@@ -51,6 +61,7 @@
           // Loop through each team member and create cards
           data.forEach((member) => {
             const card = createCard(member);
+            populateCard(member, card);
             cardContainer.appendChild(card);
           });
         })
@@ -59,19 +70,31 @@
         });
 
       // Function to populate card template with data
-      function populateCard(cardData) {
-        const cardTemplate = document.getElementById("card-template");
-        const cardTitle = cardTemplate.querySelector(".card-title");
-        const cardText = cardTemplate.querySelector(".card-text");
-        const linkedInLink = cardTemplate.querySelector(".btn");
-        const cardImage = cardTemplate.querySelector(".card-img-top"); // Add this line
-
-        cardTitle.textContent = cardData.name;
-        cardText.textContent = cardData.description;
-        linkedInLink.href = cardData.linkedIn;
-        cardImage.src = cardData.image; // Set the image source
-        cardImage.alt = cardData.name; // Set the alt attribute for accessibility
+      function populateCard(cardData, cardElement) {
+        cardElement.querySelector(".card-title").textContent = cardData.name;
+        cardElement.querySelector(".card-text").textContent =
+          cardData.description;
+        cardElement.querySelector(".linkedin-logo-link").href =
+          cardData.linkedIn; // Set the LinkedIn URL
+        const cardImage = cardElement.querySelector(".card-img-top");
+        cardImage.src = cardData.image;
+        cardImage.alt = cardData.name; // For accessibility
       }
+      // function populateCard(cardData) {
+      //   const cardTemplate = document.getElementById("card-template");
+      //   const cardTitle = cardTemplate.querySelector(".card-title");
+      //   const cardText = cardTemplate.querySelector(".card-text");
+      //   const linkedInLogoLink = cardTemplate.querySelector(
+      //     ".linkedin-logo-link"
+      //   );
+      //   const cardImage = cardTemplate.querySelector(".card-img-top"); // Add this line
+
+      //   cardTitle.textContent = cardData.name;
+      //   cardText.textContent = cardData.description;
+      //   linkedInLogoLink.href = cardData.linkedIn;
+      //   cardImage.src = cardData.image; // Set the image source
+      //   cardImage.alt = cardData.name; // Set the alt attribute for accessibility
+      // }
     </script>
 
     <!-- Card Template -->
@@ -83,9 +106,20 @@
           <p class="card-text" style="color: black"></p>
         </div>
         <div class="card-footer">
-          <a class="btn btn-primary btn-sm" href="#" target="_blank"
+          <!-- <a class="btn btn-primary btn-sm" href="#" target="_blank"
             >linkedIn</a
-          >
+          > -->
+
+          <!-- <a href="#" target="_blank" id="linkedin-logo-link"> -->
+
+          <a href="#" target="_blank" class="linkedin-logo-link">
+            <!--<img src="./assets/linkedin-logo.png" alt="LinkedIn Logo" style="width: 40px; height: 40px;" onclick="window.location.href = 'https://www.linkedin.com/in/your-profile-url/'" -->
+            <img
+              src="./assets/LI-In-Bug.png"
+              alt="LinkedIn Logo"
+              style="width: 45px; height: 40px"
+            />
+          </a>
         </div>
       </div>
     </div>
@@ -94,7 +128,13 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <div class="container px-5">
-        <a class="navbar-brand" href="#!">Firefly Adventures</a>
+        <a class="navbar-brand" href="https://www.firefly-adventures.com">
+          <img
+            src="./assets/firefly_banner_small.png"
+            alt="Firefly Logo"
+            style="height: 40px"
+          />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -137,20 +177,20 @@
         <div class="col-lg-12 text-center">
           <h5 class="font-weight-light text-center">
             We are a team of 5 engineers and 1 visioneer from around the United
-            States
+            States.
           </h5>
           <br />
           <a
-            class="btn btn-warning align-items-center"
-            href="mailto:thane@firefly-adventures.com"
-            >Say individual or via this group email.</a
+            class="btn btn-success align-items-center"
+            href="mailto:team@firefly-adventures.com"
+            >Say hi to team via email or individually via LinkedIn below.</a
           >
           <br />
         </div>
       </div>
 
       <!-- CONTENT CONTAINER-->
-      <div class="card text-white bg-white my-5 py-4 text-center">
+      <div class="card text-white bg-white my-5 py-1 text-center">
         <div class="card-body"></div>
         <!--INSERT CARD TEMPLATE-->
         <div id="card-container" class="row gx-4 gx-lg-5"></div>
