@@ -50,5 +50,14 @@
       "I am a seasoned Full Stack Software Engineer with a proven track record in leveraging cutting-edge technologies and open-source frameworks, including ReactJS, .Net, SQL, HTML5, CSS3, GitHub, and JavaScript. My expertise extends to web3 development, integration of Stripe for ledger functionalities, and seamless client interaction. I am dedicated to crafting exceptional applications by combining technical proficiency with a deep understanding of client requirements.",
     "linkedIn":
       "https://www.linkedin.com/in/jonathon-gonzalez-jonzalez/"
+  },
+  {
+    "index": 6,
+    "name": "Jordin Camp",
+    "image": "../assets/CampJordin.png",
+    "description":
+      "I am proficient at React.js and jQuery for front-end development, complemented by .NET Framework for robust backend solutions, and SQL for efficient database management. This enables me to build dynamic, full-featured web applications.  I am passionate about solving problems, building things, and improving. I am also curious, and I love exploring new topics and hobbies, such as the outdoors, new technologies, books about technology, History, and Music. robust backend solutions, and SQL for efficient database management. This diverse skill set enables me to build dynamic, full-featured web applications.  I am passionate about solving problems, building things, and improving. I value teamwork, collaboration, and learning, I strive to deliver high-quality results that meet the needs and expectations of my peers. I am also curious, and I love exploring new topics and hobbies, such as the outdoors, new technologies, books about technology, History, and Music.",
+    "linkedIn":
+      "https://www.linkedin.com/in/jordindc7/"
   }
 ]
