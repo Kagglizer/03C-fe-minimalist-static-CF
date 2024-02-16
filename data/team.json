@@ -1,46 +1,11 @@
 [
   {
-    "index": 1,
-    "name": "Sandy Saevang",
-    "image": "./assets/SandraCartoon.png",
-    "description":
-      "A passionate Full Stack engineer, with background in data specialization, full-stack development, and web application. My experience has spanned through various programming languages, allowing me to adapt and thrive in dynamic environments. This passion for problem-solving, has not only become an asset for me in my professional life, but also helped bridge my love for gaming. My love for both software engineering and gaming, has made me want to be involved in game development, and contributing to enhancing the game experience for users. My long-term goal is to eventually bring out my own creativity and create my own game for others to enjoy.",
-    "linkedIn": "https://www.linkedin.com/in/sandrasaevang/"
-  },
-  {
     "index": 2,
     "name": "Thane Thompson",
     "image": "./assets/ThaneCartoon2.png",
     "description":
       "Software developer and fractional operations executive with skills in C#/.NET, React, JavaScript, HTML/CSS, Python, and databases. Multiple application service and development experiences with engagement / customer relationship management (CRM) and geographic information systems (GIS). Super interested in AI applications to education, science, and general knowledge transfer",
     "linkedIn": "https://www.linkedin.com/in/thanejthompson/"
-  },
-  {
-    "index": 3,
-    "name": "Bill Wold",
-    "image": "../assets/cartoonbill2.png",
-    "description":
-      "Entrepreneur, author, world saving visioneer, and Army Retiree subject to recall. Former Deputy Brigade Commander, Mobilization Planner, Company Commander, Platoon Leader, Paratrooper.  Bill enjoys coaching and is a father of 3 with eldest having won a full ride scholarship for Chemistry.",
-    "linkedIn":
-      "https://www.linkedin.com/in/william-wold-06716743/"
-  },
-  {
-    "index": 4,
-    "name": "Julian Smith",
-    "image": "../assets/JulianCartoon.png",
-    "description":
-      "I am a dedicated, loyal and creative developer seeking to work in a mutually beneficial environment. I love to utilize my experience and hardworking nature to overcome obstacles and build camaraderie. I have held leadership roles and have been part of a team during this time I have determined that both leader and follower are equally important roles. My experience in the Marine Corps taught me that the mission is as important as core values. I want to merge my core values with a team and accomplish great things.",
-    "linkedIn":
-      "https://www.linkedin.com/in/julian-smith-r2d2/"
-  },
-  {
-    "index": 5,
-    "name": "Abe Ruelas",
-    "image": "../assets/AbeCartoon.png",
-    "description":
-      "Driven by an insatiable curiosity and love for learning. I've thrived as a Full-Stack Software Engineer, blending my proficiency in React.js, .NET, and SQL to innovate and solve complex challenges --from architecting secure SQL/T-SQL databases to devising APIs via the .NET Framework. I'm constantly on a quest for knowledge. My transition to Merrill Lynch in 2022 wasn't just a career move—it was a learning expedition. But more than that, I learned the value of trust, of building relationships, and of aligning dreams with tangible solutions. I strive to create spaces where knowledge is shared, ideas are celebrated, and everyone feels valued. It's not just about being technically adept; it's about creating an atmosphere where people genuinely love to work and learn together.",
-    "linkedIn":
-      "https://www.linkedin.com/in/abraham-e-ruelas/"
   },
   {
     "index": 6,
