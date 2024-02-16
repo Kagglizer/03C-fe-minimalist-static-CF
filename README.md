@@ -1,0 +1,2 @@
+# 03C-fe-minimalist-static-CF
+Minimalist static homepage for cloudflare to route to Azure App Service and / or other services
