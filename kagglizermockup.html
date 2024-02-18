@@ -88,22 +88,29 @@
           />
           <br><br/>
           <div class="container-bullets">
-            <h3>Key Design Ideas</h3>
-            <ul>
-                <li>Data tells a story, sometimes we need help finding that plotline, and an AI assistant can help.</li>
-                <br/>
-                <li>We use content developed by real data science professional.  Our problem solving recommendations will be balanced between student progress and the problem solving standards.</li>
-                <br/>
-                <li>Problem solving steps will be built into a digital library of problem solving approaches, the AI assistant will tie stage of problem solving to assistance.</li>
-                <br/>
-                <li>Y.</li>
-                <br/>
-                <li>Z.</li>
-                <br/>
-                <li>AA.</li>
-                <br/>
-                <li>BB</li>
-            </ul>
+            <h3>Prioritized Design Objectives</h3>
+            <br/>
+            <ol>
+              <li><strong>HELP SOLVE THE MYSTERY - </strong>
+                Often, the analyst must uncover a story hidden in the data. Our tool must assist the analyst step through the problem-solving process with an AI assistant.</li>
+              <br/>
+              <li><strong>INTUITIVE USER INTERFACE - </strong>
+                Design an intuitive and user-friendly tri-panel interface that allows users to easily navigate through the problem data, analytic notebook, and interact with an AI assistant.</li>
+              <br/>
+              <li><strong>SYNCHRONIZATION OF PANELS - </strong>Implement synchronization of tri-panels based on problem-solving steps to coordinate problem understanding, solution work, and AI assistance to keep the analyst on track. Ideally, the AI assistant will synchronize with the problem-solving steps so that algorithms can automatically generate insights and patterns from the data, helping users uncover hidden relationships and trends without manual exploration.</li>
+              <br/>
+              <li><strong>TRI-PANEL 1: CASEBOOK AND REFERENCE THROUGH STEPS - </strong>
+                Provide a fusion of problem background information with classic data science problem-solving algorithm steps. This may be accomplished using API calls to a curated Azure SQL database or potentially using Retrieval-Augmented Generation (RAG) where the AI has specific problem and data science textbooks embedded.</li>
+              <br/>
+              <li><strong>TRI-PANEL 2: PYTHON-BASED SOLVING TOOLS - </strong>
+                Enable use of tools for data exploration, including summary statistics, data profiling, and visualizations such as histograms, scatter plots, and heatmaps. This may be accomplished using MS Synapse Data Engineering tools or API calls to Azure Services.</li>
+              <br/>
+              <li><strong>TRI-PANEL 3: AI ASSISTANT - </strong>Enable users to ask questions of an AI assistant tuned to the specific problem, domain references, and data science methodology.  Initially, this may be accomplished with an API call to Azure OpenAi. Later, we need to ensure the AI is prompted by the analyst's step of work and relevent references.  </li>
+              <br/>
+              <li><strong>INTERACTIVE STORYTELLING - </strong>At the end of the solving work, the record of human and AI-generated text and code solutions is used to create interactive narratives or stories based on their analysis, allowing the user to convey their findings and solutions effectively to stakeholders, team members, or competition judging boards.</li>
+              <br/>
+              <li><strong>PROBLEM-SOLVING RECOMMENDATIONS - </strong>In the backend, classic problem-solving steps will be built into a digital library of problem-solving approaches. The AI assistant will provide assistance based on the stage of problem-solving. We use content developed by real data science professionals. Our problem-solving recommendations will be balanced between student progress and problem-solving standards.</li>
+          </ol>
         </div>
         <br><br/>
         </div>
@@ -111,7 +118,7 @@
     <!-- Footer-->
     <footer class="py-4 bg-success">
       <div class="container px-4 px-lg-5">
-        <p class="m-0 text-center text-white">Copyright &copy; Kagglizer 2024</p>
+        <p class="m-0 text-center text-white">Wishfully &copy; Kagglizer 2024</p>
       </div>
     </footer>
     <!-- Bootstrap core JS-->
