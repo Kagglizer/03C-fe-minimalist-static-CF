@@ -3,10 +3,10 @@
   {
     "index": 1,
     "name": "Luca Chitayat",
-    "image": "./assets/OhanianOrrin.png",
+    "image": "./assets/ChitayatLuca.png",
     "description": "Software Engineer pushing the boundaries of usability. Questioning common beliefs to discover novel solutions at the intersection of science and art.      Engineering and designing functional platforms for diverse technologies.",
     "linkedIn":
-      "https://www.linkedin.com/in/orrin-ohanian-ba196292/"
+      "https://www.linkedin.com/in/lucachitayat/"
   }
 ,
 {
@@ -42,7 +42,7 @@
     "name": "Thane Thompson",
     "image": "./assets/ThaneCartoon2.png",
     "description":
-      "Software developer and fractional operations executive with skills in C#/.NET, React, JavaScript, HTML/CSS, Python, and databases. Multiple application service and development experiences with engagement / customer relationship management (CRM) and geographic information systems (GIS). Super interested in AI applications to education, science, and general knowledge transfer",
+      "Software developer and fractional operations executive with skills in C#/.NET, React, JavaScript, HTML/CSS, Python, and databases. Multiple application service and development experiences with engagement / customer relationship management (CRM). Super interested in AI support for education and science.",
     "linkedIn": "https://www.linkedin.com/in/thanejthompson/"
   }
 ]
